@@ -5,8 +5,15 @@ $(document).ready(function(){
 		getExercises(pageNumber);
 		pageNumber += 1;
 	}
+	getWeather("pittsburgh");
 })
-
+function getWeather(city){
+	url = "http://api.openweathermap.org/data/2.5/forecast?q=" + city+",us&mode=json"
+	$.getJSON(url, function(responseObject){
+		var results = responseObject;
+		console.log(results);
+	});
+}
 function getExercises(pageNumber){
 	url = "https://wger.de/api/v2/exercise/?page=" + pageNumber + "&format=json"
 	$.getJSON(url, function(responseObject){
