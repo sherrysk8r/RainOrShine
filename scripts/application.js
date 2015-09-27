@@ -1,11 +1,18 @@
 var englishExercises = [];
 $(document).ready(function(){
+
 	var pageNumber = 1;
 	while(pageNumber <= 16){
 		getExercises(pageNumber);
 		pageNumber += 1;
 	}
-	getWeather("pittsburgh");
+
+	$('#submit-button').click(function(){
+		sessionStorage.setItem("zipcode", $("#zipcode").val());
+	});
+	
+	console.log(sessionStorage.getItem("zipcode"));
+	getWeather(sessionStorage.getItem("zipcode"));
 })
 function getWeather(city){
 	url = "http://api.openweathermap.org/data/2.5/forecast?q=" + city+",us&mode=json"
