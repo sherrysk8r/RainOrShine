@@ -1,11 +1,20 @@
 <html>
 <head>
 	<title>Rain or Shine!</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="scripts/application.js"></script>
 </head>
 <body>
-	<div id="weather"></div>
+	<div id="weather">
+		<h3 id="cityName"></h3>
+		<p id="current_weather"></p>
+		<p id="current_temperature">
+			<span class="temp">Now: <span id="now"></span>&deg;F</span>
+			<span class="temp">Low: <span id="low"></span>&deg;F</span>
+			<span class="temp">High: <span id="high"></span>&deg;F</span>
+		</p>
+	</div>
 	<div id="workout"></div>
 </body>
 </html>
