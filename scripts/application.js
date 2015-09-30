@@ -8,6 +8,7 @@ $(document).ready(function(){
 		getExercises(pageNumber);
 		pageNumber += 1;
 	}
+
 	getWeather(sessionStorage.getItem("zipcode"));
 	getEquipmentList();
 	getExerciseCategory();
@@ -61,12 +62,12 @@ function getExercises(pageNumber){
 		
 		var engExercises = results.results.map(function(obj){
 			// language 2 is English
-			if( obj.language = 2){
+			if( obj.language == 2){
 				return obj;
 			};
 		})
-		
 		$.merge(englishExercises, engExercises);
+		englishExercises = englishExercises.clean(null);
 	});
 }
 
@@ -98,7 +99,7 @@ function addCategoriesToResultPage(){
 }
 
 function pickRandomExercise(exerciseCategoryID){
-	// console.log(exerciseCategoryID);
+	console.log(exerciseCategoryID);
 	var exercisesInCategory = englishExercises.map(function(obj){
 		return (obj.category == exerciseCategoryID ? obj : null);
 	});
