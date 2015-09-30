@@ -1,13 +1,47 @@
-<html>
-<head>
-	<title>Rain or Shine!</title>
-	<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rain or Shine!</title>
+    <link rel="stylesheet" href="styles/foundation.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="scripts/application.js"></script>
-</head>
-<body>
-	<form action="result.html">
-		<input type="text" id="zipcode" name="zipcode" placeholder="zipcode or city name">
-		<input type="submit" value="submit" id="submit-button">
-	</form>
+  </head>
+  <body>
+ <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#" id="nav-title">Rain or Shine</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li><a href="#" id="login">Log In</a></li>
+    </ul>
+  </section>
+</nav>
+
+<section class="hero">
+	<div class="row intro" id="landing">
+	<div class="medium-8 large-8 columns">
+      <h1 class="text-white text-left"><strong>Find the best workout for you, no matter the weather</strong></h1>
+    </div>
+		<form action="result.html">
+			<input type="text" id="zipcode" name="zipcode" placeholder="zipcode or city name">
+			<input type="submit" class="button" value="submit" id="submit-button">
+		</form>
+	</div>
+</section>
+
+    <script src="scripts/vendor/jquery.js"></script>
+    <script src="scripts/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 </body>
 </html>
