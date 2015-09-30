@@ -37,6 +37,20 @@ function showWeather(weatherObj){
 	var icon_url = "http://openweathermap.org/img/w/" + weatherObj.weather[0].icon + ".png"
 	$('#weather').prepend("<img src=" + icon_url + ">");
 }
+// =======
+// 		var list = results.list;
+// 		var div = document.getElementById('weather');
+// 		div.innerHTML = div.innerHTML + list[0].weather[0].description + '<br>'
+// 		div.innerHTML = div.innerHTML + '<br>Humidity:' + list[0].main.humidity
+// 		div.innerHTML = div.innerHTML + '<br>Wind Speed (mph):' + list[0].wind.speed
+// 		/*
+// 		//right now this prints all the results (ie lots of data) to be used later
+// 		for(var i in list){
+// 			div.innerHTML = div.innerHTML + list[i].weather[0].description;
+//     	}*/
+// 	});
+// }
+
 
 function getExercises(pageNumber){
 	url = "https://wger.de/api/v2/exercise/?page=" + pageNumber + "&format=json"
