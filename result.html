@@ -10,25 +10,40 @@
     <script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="scripts/application.js"></script>
   </head>
-<body>
-	<div id="weather">
-		<h3 id="cityName"></h3>
-		<!-- this should later be converted to a tooltip on the icon -->
-		<p id="current_weather"></p>
-		<p id="current_temperature">
-			<span class="temp">Now: <span id="now"></span>&deg;F</span>
-			<span class="temp">Low: <span id="low"></span>&deg;F</span>
-			<span class="temp">High: <span id="high"></span>&deg;F</span>
-		</p>
-	</div>
-	<div id="workout"></div>
-		<h3>Try These Out!</h3>
-		<div id="exercise_proposals"></div>
-	</div>
-    <script src="scripts/vendor/jquery.js"></script>
-    <script src="scripts/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+<body id="results">
+	<nav class="top-bar" data-topbar role="navigation">
+	  <ul class="title-area">
+	    <li class="name">
+	      <h1><a href="#" id="nav-title">Rain or Shine</a></h1>
+	    </li>
+	  </ul>
+	</nav>
+
+	<section class="options">
+		<div class="row">
+			<div id="weather" class="medium-2 large-2 columns">
+				<h3 id="cityName"></h3>
+				<!-- this should later be converted to a tooltip on the icon -->
+				<p id="current_weather"></p>
+				<p id="current_temperature">
+					<span class="temp">Now: <span id="now"></span>&deg;F</span><br>
+					<span class="temp">Low: <span id="low"></span>&deg;F</span><br>
+					<span class="temp">High: <span id="high"></span>&deg;F</span><br>
+					<p><strong>Stay warm by trying one of these indoor workout options!</strong></p>
+				</p>
+			</div>
+			<div id="workout" class="medium-10 large-10 columns">
+				<div id="exercise_proposals">
+					<div id="loading">
+						<div class="large-2 columns">
+							<script src="scripts/vendor/jquery.js"></script>
+			    			<script src="scripts/foundation.min.js"></script>
+			    			<script>$(document).foundation();</script>
+					    </div>
+				    </div>
+		    	</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

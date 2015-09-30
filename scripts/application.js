@@ -15,6 +15,8 @@ $(document).ready(function(){
 	$('#submit-button').click(function(){
 		sessionStorage.setItem("zipcode", $("#zipcode").val());
 	});
+
+	$('#loading').hide();
 })
 
 function getWeather(city){
