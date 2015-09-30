@@ -6,6 +6,7 @@
     <title>Rain or Shine!</title>
     <link rel="stylesheet" href="styles/foundation.css" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
     <script src="scripts/vendor/modernizr.js"></script>
     <script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="scripts/application.js"></script>
@@ -13,27 +14,28 @@
   <body>
  <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
-    <li class="name">
-      <h1><a href="#" id="nav-title">Rain or Shine</a></h1>
+    <li>
+      <h2 id="title"><strong>Rain or Shine</strong></h2>
     </li>
   </ul>
 
   <section class="top-bar-section">
     <!-- Right Nav Section -->
-    <ul class="right">
-      <li><a href="#" id="login">Log In</a></li>
-    </ul>
   </section>
 </nav>
 
 <section class="hero">
 	<div class="row intro" id="landing">
 	<div class="medium-8 large-8 columns">
-      <h1 class="text-white text-left"><strong>Find the best workout for you, no matter the weather</strong></h1>
+      <h1 class="text-left"><strong>Find the best workout for you, no matter the weather</strong></h1>
     </div>
 		<form action="result.html">
-			<input type="text" id="zipcode" name="zipcode" placeholder="zipcode or city name">
-			<input type="submit" class="button" value="submit" id="submit-button">
+      <div class="row">
+  			<div class="small-6 columns">
+          <input type="text" id="zipcode" name="zipcode" placeholder="zipcode or city name">
+        </div>
+      </div>
+			<input type="submit" class="button style-button" value="SUBMIT" id="submit-button">
 		</form>
 	</div>
 </section>
