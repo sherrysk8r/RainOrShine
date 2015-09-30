@@ -35,7 +35,7 @@ function showWeather(weatherObj){
 	$('#now').text(weatherObj.main.temp);
 	$('#current_weather').text(weatherObj.weather[0].main);
 	var icon_url = "http://openweathermap.org/img/w/" + weatherObj.weather[0].icon + ".png"
-	$('#weather').prepend("<img src=" + icon_url + ">");
+	$('#cityName').prepend("<img src=" + icon_url + ">");
 }
 // =======
 // 		var list = results.list;
